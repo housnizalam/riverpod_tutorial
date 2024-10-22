@@ -10,3 +10,4 @@ final counterStateNotifierProvider = StateNotifierProvider<AppStateNotifier, App
 // dieses Provider kann nur ein Int Value repräsentieren
 final singelCounterStateNotifierProvider = StateNotifierProvider<SingelNotifier, int>((ref) => SingelNotifier());
 
+

@@ -14,3 +14,4 @@ final counterFutureProvider = FutureProvider<AppState>(
     return ref.watch(counterNotifierProvider);
   },
 );
+

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 // nach installieren Riverpod in pbspecyml soll diese Package (flutter_riverpod) importiert werden,
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_tutorial/homs/home_einfach_provider/home_einfach_provider.dart';
+import 'package:riverpod_tutorial/homs/home_einfach_state_notifier/home_einfach_provider.dart';
+import 'package:riverpod_tutorial/homs/home_fake_api_provider/home_fake_api_provider.dart';
 import 'package:riverpod_tutorial/homs/home_future.dart/home_future.dart';
 import 'package:riverpod_tutorial/homs/home_notifier_provider/home_notifier_provider.dart';
 import 'package:riverpod_tutorial/homs/home_state_notifier_provider/home_state_notifier_provider.dart';
@@ -21,12 +24,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeStateNotifierProvider(),
+      home: HomeEinfachStateNotifier(),
       // HomeStateNotifierProvider()
       // HomeNotifierProvider()
       // HomeStateProvider()
       // HomeFutureProvider()
       // HomeStreamProvider()
+      // HomeFakeAPIProvider(),
+      // HomeEinfachProvider(),
+      // HomeEinfachStateNotifier(),
     );
   }
 }
