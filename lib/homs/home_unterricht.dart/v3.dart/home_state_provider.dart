@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/arrows_buttons.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/logisch.dart';
+import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/logic.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/widgets/alter_text.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/widgets/button_widget.dart';
 

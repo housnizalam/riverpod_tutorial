@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_tutorial/arrows_buttons.dart';
+import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
 
 class ButtonWidget extends StatefulWidget {
    ButtonWidget({super.key,required this.alter});
