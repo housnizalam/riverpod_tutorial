@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_tutorial/logic/notifier/notifier.dart';
 import 'package:riverpod_tutorial/logic/provider/notifier_provider.dart';
 
 class TextNotifierProvider extends ConsumerWidget {
@@ -24,7 +25,7 @@ class TextNotifierProvider extends ConsumerWidget {
           style: TextStyle(fontSize: 35),
         ),
         Text(
-          number,
+          ref.watch(counterProvider).toString(),
           style: TextStyle(fontSize: 35),
         ),
       ],

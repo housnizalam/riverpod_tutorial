@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/logic/provider/einfach_provider.dart';
 import 'package:riverpod_tutorial/logic/provider/einfach_state_notifier_provider.dart';
 
 class TextEinfachStateNotifier extends ConsumerWidget {

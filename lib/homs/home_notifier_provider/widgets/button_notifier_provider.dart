@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_tutorial/logic/notifier/notifier.dart';
 import 'package:riverpod_tutorial/logic/provider/notifier_provider.dart';
 
 
@@ -22,6 +23,7 @@ class ButtonNotifierProvider extends ConsumerWidget {
                   // read wird beim Methoden genutzt weil sie nur einmal passieren und
                   // brauchen keine rück Wert zu schauen 
                   ref.read(counterNotifierProvider.notifier).increment();
+                  ref.read(counterProvider.notifier).increment();
                 },
                 child: const Icon(Icons.add),
               ),

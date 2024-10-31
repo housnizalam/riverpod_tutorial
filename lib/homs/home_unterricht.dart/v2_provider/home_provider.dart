@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2.dart/widgets/alter_text.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2.dart/widgets/button_widget.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2_provider/widgets/alter_text.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2_provider/widgets/button_widget.dart';
 
 class HomeUnterrichtProvider extends ConsumerWidget {
   const HomeUnterrichtProvider({super.key});
@@ -25,3 +25,4 @@ class HomeUnterrichtProvider extends ConsumerWidget {
     ));
   }
 }
+

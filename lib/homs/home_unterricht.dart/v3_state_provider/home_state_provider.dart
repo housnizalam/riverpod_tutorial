@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/logic.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/widgets/alter_text.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/widgets/button_widget.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3_state_provider/logic.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3_state_provider/widgets/alter_text.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3_state_provider/widgets/button_widget.dart';
 
 class HomeUnterrichtStateProvider extends ConsumerWidget {
   const HomeUnterrichtStateProvider({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    // print(ref.watch(detailsProvider));
     return Scaffold(
         floatingActionButton: FloatingActionButton(
           onPressed: () {
@@ -56,7 +57,7 @@ class HomeUnterrichtStateProvider extends ConsumerWidget {
                           onPressed: () {
                             ref.read(geschlechtProvider.notifier).state = 'Weiblich';
                           },
-                          child: Text('F'),
+                          child: Text('W'),
                         ),
                         TextButton(
                           onPressed: () {

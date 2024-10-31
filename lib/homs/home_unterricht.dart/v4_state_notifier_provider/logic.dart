@@ -1,26 +1,42 @@
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+class AlterStateNotifier extends StateNotifier<int> {
+  AlterStateNotifier() : super(20);
+  upgradeAlter(int value) {
+    state += value;
+  }
+
+  void increment() => state++;
+  void decrement() => state--;
+}
+
+final alterStateNotifierProvider = StateNotifierProvider<AlterStateNotifier, int>((ref) => AlterStateNotifier());
+
+
+
+
+
+
+
 class BmiRechner {
-  final double alter;
   final double gewicht;
   final double groesse;
   final String geschlecht;
   BmiRechner({
-    required this.alter,
     required this.gewicht,
     required this.groesse,
     required this.geschlecht,
   });
 
   BmiRechner copyWith({
-    double? alter,
     double? gewicht,
     double? groesse,
     String? geschlecht,
   }) {
     return BmiRechner(
-      alter: alter ?? this.alter,
       gewicht: gewicht ?? this.gewicht,
       groesse: groesse ?? this.groesse,
       geschlecht: geschlecht ?? this.geschlecht,
@@ -45,11 +61,9 @@ class BmiRechner {
 
 class BMIStateNotifier extends StateNotifier<BmiRechner> {
   BMIStateNotifier()
-      : super(BmiRechner(alter: 20, gewicht: 80, groesse: 180, geschlecht: 'Mänlich'));
+      : super(BmiRechner( gewicht: 80, groesse: 180, geschlecht: 'Mänlich'));
 
-  void upgradeAlter(int int) {
-    state = state.copyWith(alter: state.alter + int);
-  }
+ 
 
   void upgradeGewicht(int int) {
     state = state.copyWith(gewicht: state.gewicht + int);
@@ -60,9 +74,15 @@ class BMIStateNotifier extends StateNotifier<BmiRechner> {
   }
 
   void upgradeGeschlecht(String geschlecht) {
+    
     state = state.copyWith(geschlecht: geschlecht);
   }
 
 }
 
-final bmiStateNotifierProvider = StateNotifierProvider<BMIStateNotifier, BmiRechner>((ref) => BMIStateNotifier());
+final bmiStateNotifierProvider = StateNotifierProvider<BMIStateNotifier, BmiRechner>((ref){
+  
+  return BMIStateNotifier();
+});
+
+

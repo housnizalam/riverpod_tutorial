@@ -9,10 +9,11 @@ import 'package:riverpod_tutorial/homs/home_notifier_provider/home_notifier_prov
 import 'package:riverpod_tutorial/homs/home_state_notifier_provider/home_state_notifier_provider.dart';
 import 'package:riverpod_tutorial/homs/home_state_provider/home_state_provider.dart';
 import 'package:riverpod_tutorial/homs/home_stream/home_stream.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v1.dart/unterricht_home.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2.dart/home_provider.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3.dart/home_state_provider.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4/home_state_notifier_provider.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v1_statefull_widget/unterricht_home.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2_provider/home_provider.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3_state_provider/home_state_provider.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4_state_notifier_provider/home_state_notifier_provider.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v5_notifier_provider/home_state_notifier_provider.dart';
 
 void main() {
   // MyApp soll in Provider feststellt Das Widget Baum in dem, der Riverod effektiv ist
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeUnterrichtStateNotifierProvider(),
+      home: HomeUnterrichtNotifier(),
       // HomeStateNotifierProvider()
       // HomeNotifierProvider()
       // HomeStateProvider()
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
       // HomeUnterrichtProvider(),
       // HomeUnterrichtStateProvider(),
       // HomeUnterrichtStateNotifierProvider(),
+      // HomeUnterrichtNotifier(),
     );
   }
 }

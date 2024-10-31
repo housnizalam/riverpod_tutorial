@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v1_statefull_widget/widgets/alter_text.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v1_statefull_widget/widgets/button_widget.dart';
 
 class HomeStatefull extends StatefulWidget {
   const HomeStatefull({super.key});
@@ -17,27 +19,11 @@ class _HomeStatefullState extends State<HomeStatefull> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            'Alter: $alter',
-            style: TextStyle(fontSize: 40),
-          ),
+         AlterText(alter: alter),
           SizedBox(
             width: 40,
           ),
-          ArrowButtons.vertical(
-            height: 40,
-            width: 40,
-            onPressedUp: () {
-              setState(() {
-                alter++;
-              });
-            },
-            onPressedDown: () {
-              setState(() {
-                alter--;
-              });
-            },
-          ),
+          ButtonWidget(alter: alter,)
         ],
       ),
     ));

@@ -34,8 +34,17 @@ class CounterNotifier extends Notifier<AppState> {
     print(state.countUp);
   }
 }
+class Counter extends Notifier<int> {
+  @override
+  int build() {
+    return 0;
+  }
 
-
+  void increment() {
+    state++;
+  }
+}
+final counterProvider = NotifierProvider<Counter,int>(() => Counter());
 
 
 class CounterNotifier2 extends Notifier<AppState2> {

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4/logic/good_practice.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4_state_notifier_provider/logic.dart';
 
-class GewichtNotifierUntericht extends ConsumerWidget {
-  const GewichtNotifierUntericht({super.key});
+class GewichtStaateNotifierUntericht extends ConsumerWidget {
+  const GewichtStaateNotifierUntericht({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
