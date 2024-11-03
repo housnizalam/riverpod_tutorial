@@ -12,28 +12,31 @@ class AlterWidgetStateNotifier extends ConsumerWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Alter: $alter',
-          style: const TextStyle(fontSize: 30),
+        Expanded(flex: 3,
+          child: FittedBox(
+            child: Text(
+              'Alter: $alter',
+              style: const TextStyle(fontSize: 30),
+            ),
+          ),
         ),
-        ArrowButtons.vertical(
-          height: 40,
-          width: 40,
-          onPressedUp: () {
-            ref.read(alterStateNotifierProvider.notifier).increment();
-          },
-          onPressedDown: () {
-            ref.read(alterStateNotifierProvider.notifier).decrement();
-          },
-          onLongPressedUp: () {
-            ref.read(alterStateNotifierProvider.notifier).upgradeAlter(10);
-          },
-          onLongPressedDown: () {
-            ref.read(alterStateNotifierProvider.notifier).upgradeAlter(-10);
-          },
-        ),
-        const SizedBox(
-          width: 60,
+        Expanded(
+          child: ArrowButtons.vertical(
+            height: 40,
+            width: 40,
+            onPressedUp: () {
+              ref.read(alterStateNotifierProvider.notifier).increment();
+            },
+            onPressedDown: () {
+              ref.read(alterStateNotifierProvider.notifier).decrement();
+            },
+            onLongPressedUp: () {
+              ref.read(alterStateNotifierProvider.notifier).upgradeAlter(10);
+            },
+            onLongPressedDown: () {
+              ref.read(alterStateNotifierProvider.notifier).upgradeAlter(-10);
+            },
+          ),
         ),
       ],
     );

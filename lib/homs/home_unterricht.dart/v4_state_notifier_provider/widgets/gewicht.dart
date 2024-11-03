@@ -10,29 +10,33 @@ class GewichtStaateNotifierUntericht extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Row(
       children: [
-        Text(
-          'Gewicht: ${ref.watch(bmiStateNotifierProvider).gewicht}',
-          style: TextStyle(fontSize: 30),
+        Expanded(flex: 3,
+          child: FittedBox(
+            child: Text(
+              'Gewicht: ${ref.watch(bmiStateNotifierProvider).gewicht}',
+              style: TextStyle(fontSize: 30),
+            ),
+          ),
         ),
-        ArrowButtons.vertical(
-          height: 40,
-          width: 40,
-          onPressedUp: () {
-            ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(1);
-          },
-          onPressedDown: () {
-            ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(-1);
-          },
-          onLongPressedUp: () {
-            ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(10);
-          },
-          onLongPressedDown: () {
-            ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(-10);
-          },
+        Expanded(
+          child: ArrowButtons.vertical(
+            height: 40,
+            width: 40,
+            onPressedUp: () {
+              ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(1);
+            },
+            onPressedDown: () {
+              ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(-1);
+            },
+            onLongPressedUp: () {
+              ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(10);
+            },
+            onLongPressedDown: () {
+              ref.read(bmiStateNotifierProvider.notifier).upgradeGewicht(-10);
+            },
+          ),
         ),
-        SizedBox(
-          width: 60,
-        ),
+    
       ],
     );
   }

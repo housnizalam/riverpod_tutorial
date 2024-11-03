@@ -27,16 +27,16 @@ class HomeUnterrichtNotifier extends ConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AlterWidgetNotifier(),
-                GeschlechtWidgetNotifier(),
+                Expanded(child: AlterWidgetNotifier()),
+                Expanded(child: GeschlechtWidgetNotifier()),
               ],
             ),
             BmiWidgetChangeNotifier(),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GewichtUnterichtNotifier(),
-                GroesseUnterrichtNotifier(),
+                Expanded(child: GewichtUnterichtNotifier()),
+                Expanded(child: GroesseUnterrichtNotifier()),
               ],
             ),
           ],

@@ -29,17 +29,17 @@ class HomeUnterrichtStateProvider extends ConsumerWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  AlterTextStateProvider(),
-                  ButtonWidgetStateProvider(),
+                  Expanded(flex: 3, child: AlterTextStateProvider()),
+                  Expanded(child: ButtonWidgetStateProvider()),
                   SizedBox(
-                    width: 60,
+                    width: 20,
                   ),
-                  SizedBox(
-                    height: 40,
-                    width: 120,
-                    child: Text(
-                      ref.watch(geschlechtProvider),
-                      style: TextStyle(fontSize: 30),
+                  Expanded(
+                    flex: 3,
+                    child: FittedBox(
+                      child: Text(
+                        ref.watch(geschlechtProvider),
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -49,19 +49,22 @@ class HomeUnterrichtStateProvider extends ConsumerWidget {
                       children: [
                         TextButton(
                           onPressed: () {
-                            ref.read(geschlechtProvider.notifier).state = 'Mänlich';
+                            ref.read(geschlechtProvider.notifier).state =
+                                'Mänlich';
                           },
                           child: Text('M'),
                         ),
                         TextButton(
                           onPressed: () {
-                            ref.read(geschlechtProvider.notifier).state = 'Weiblich';
+                            ref.read(geschlechtProvider.notifier).state =
+                                'Weiblich';
                           },
                           child: Text('W'),
                         ),
                         TextButton(
                           onPressed: () {
-                            ref.read(geschlechtProvider.notifier).state = 'Anders';
+                            ref.read(geschlechtProvider.notifier).state =
+                                'Anders';
                           },
                           child: Text('A'),
                         )
@@ -88,9 +91,12 @@ class HomeUnterrichtStateProvider extends ConsumerWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    'Gewicht: ${ref.watch(gewichtProvider)}',
-                    style: TextStyle(fontSize: 30),
+                  Expanded(flex: 3,
+                    child: FittedBox(
+                      child: Text(
+                        'Gewicht: ${ref.watch(gewichtProvider)}',
+                      ),
+                    ),
                   ),
                   ArrowButtons.vertical(
                     height: 40,
@@ -109,11 +115,14 @@ class HomeUnterrichtStateProvider extends ConsumerWidget {
                     },
                   ),
                   SizedBox(
-                    width: 60,
+                    width: 20,
                   ),
-                  Text(
-                    'Height: ${ref.watch(groesseProvider)}',
-                    style: TextStyle(fontSize: 30),
+                  Expanded(flex: 3,
+                    child: FittedBox(
+                      child: Text(
+                        'Height: ${ref.watch(groesseProvider)}',
+                      ),
+                    ),
                   ),
                   ArrowButtons.vertical(
                     height: 40,
@@ -124,8 +133,10 @@ class HomeUnterrichtStateProvider extends ConsumerWidget {
                     onPressedDown: () {
                       ref.read(groesseProvider.notifier).state--;
                     },
-                    onLongPressedUp: () => ref.read(groesseProvider.notifier).state += 10,
-                    onLongPressedDown: () => ref.read(groesseProvider.notifier).state -= 10,
+                    onLongPressedUp: () =>
+                        ref.read(groesseProvider.notifier).state += 10,
+                    onLongPressedDown: () =>
+                        ref.read(groesseProvider.notifier).state -= 10,
                   ),
                 ],
               ),

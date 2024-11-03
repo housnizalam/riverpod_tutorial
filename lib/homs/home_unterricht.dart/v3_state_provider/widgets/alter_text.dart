@@ -10,7 +10,8 @@ class AlterTextStateProvider extends ConsumerWidget {
       alterStateProvider,
       (previous, actuell) {
         if (actuell < 0 && previous! >= 0) {
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Alter darf nicht negativ sein')));
+          ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('Alter darf nicht negativ sein')));
         }
       },
     );
@@ -23,9 +24,10 @@ class AlterTextStateProvider extends ConsumerWidget {
     //   },
     // );
     final alter = ref.watch(alterStateProvider);
-    return Text(
-      'Alter: $alter',
-      style: TextStyle(fontSize: 30),
+    return FittedBox(
+      child: Text(
+        'Alter: $alter',
+      ),
     );
   }
 }
