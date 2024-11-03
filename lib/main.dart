@@ -14,6 +14,7 @@ import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2_provider/home_pro
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3_state_provider/home_state_provider.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4_state_notifier_provider/home_state_notifier_provider.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v5_notifier_provider/home_state_notifier_provider.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/home_widget.dart';
 
 void main() {
   // MyApp soll in Provider feststellt Das Widget Baum in dem, der Riverod effektiv ist
@@ -29,7 +30,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeUnterrichtNotifier(),
+      debugShowCheckedModeBanner: false,
+      home: HomeUnterrichtFutureProvider(),
       // HomeStateNotifierProvider()
       // HomeNotifierProvider()
       // HomeStateProvider()
@@ -43,6 +45,7 @@ class MyApp extends StatelessWidget {
       // HomeUnterrichtStateProvider(),
       // HomeUnterrichtStateNotifierProvider(),
       // HomeUnterrichtNotifier(),
+      // HomeUnterrichtFutureProvider(),
     );
   }
 }
