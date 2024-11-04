@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-// nach installieren Riverpod in pbspecyml soll diese Package (flutter_riverpod) importiert werden,
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_tutorial/homs/home_einfach_provider/home_einfach_provider.dart';
 import 'package:riverpod_tutorial/homs/home_einfach_state_notifier/home_einfach_provider.dart';
@@ -15,6 +14,7 @@ import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3_state_provider/ho
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4_state_notifier_provider/home_state_notifier_provider.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v5_notifier_provider/home_state_notifier_provider.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/home_widget.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v7_future_provider_local_speicher/home_widget.dart';
 
 void main() {
   // MyApp soll in Provider feststellt Das Widget Baum in dem, der Riverod effektiv ist
@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeUnterrichtFutureProvider(),
+      home: HomeUnterrichtFutureProviderLokalSpeicher(),
       // HomeStateNotifierProvider()
       // HomeNotifierProvider()
       // HomeStateProvider()
@@ -46,6 +46,7 @@ class MyApp extends StatelessWidget {
       // HomeUnterrichtStateNotifierProvider(),
       // HomeUnterrichtNotifier(),
       // HomeUnterrichtFutureProvider(),
+      // HomeUnterrichtFutureProviderLokalSpeicher(),
     );
   }
 }
