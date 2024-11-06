@@ -55,7 +55,7 @@ class BmiRechner {
 
 class BmiRechnerNotifier extends Notifier<BmiRechner> {
   @override
-  BmiRechner build() => (BmiRechner(gewicht: 80, groesse: 180, geschlecht: 'Mänlich'));
+  BmiRechner build() => (const BmiRechner(gewicht: 80, groesse: 180, geschlecht: 'Mänlich'));
 
   void upgradeGewicht(int gewicht) {
     state = state.copyWith(gewicht: state.gewicht + gewicht);

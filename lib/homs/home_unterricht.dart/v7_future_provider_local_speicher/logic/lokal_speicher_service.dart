@@ -1,4 +1,3 @@
-
 import 'dart:convert';
 import 'dart:io';
 
@@ -12,13 +11,13 @@ class LokalSpeicherService {
       return directory.path;
     } catch (e) {
       print('Error $e');
-      rethrow; 
+      rethrow;
     }
   }
 
   Future<File> get _localFile async {
     final path = await _localPath;
-    final file = File('$path/data.txt');
+    final file = File('$path/bmi_data.txt');
     if (!await file.exists()) {
       await file.create();
     }

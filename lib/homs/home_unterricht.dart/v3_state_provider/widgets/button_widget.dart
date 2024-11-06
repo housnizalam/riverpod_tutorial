@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v3_state_provider/logic.dart';
 
 class ButtonWidgetStateProvider extends ConsumerWidget {
@@ -29,3 +29,5 @@ class ButtonWidgetStateProvider extends ConsumerWidget {
     );
   }
 }
+
+

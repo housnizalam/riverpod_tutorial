@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v7_future_provider_local_speicher/logic/future_provider.dart';
 
 class AddDatumWidgetLokalSpeicher extends ConsumerWidget {
@@ -25,64 +25,56 @@ class AddDatumWidgetLokalSpeicher extends ConsumerWidget {
             width: 27,
             height: 27,
             onPressedUp: () {
-              ref
-                  .read(bmiProviderLokalSpeicher.notifier)
-                  .changeDatum(datum.add(const Duration(days: 1)));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(datum.add(const Duration(days: 1)));
             },
             onPressedDown: () {
-              ref
-                  .read(bmiProviderLokalSpeicher.notifier)
-                  .changeDatum(datum.subtract(const Duration(days: 1)));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(datum.subtract(const Duration(days: 1)));
             },
             onLongPressedUp: () {
-              ref
-                  .read(bmiProviderLokalSpeicher.notifier)
-                  .changeDatum(datum.add(const Duration(days: 10)));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(datum.add(const Duration(days: 10)));
             },
             onLongPressedDown: () {
-              ref
-                  .read(bmiProviderLokalSpeicher.notifier)
-                  .changeDatum(datum.subtract(const Duration(days: 10)));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(datum.subtract(const Duration(days: 10)));
             },
           ),
           ArrowButtons.vertical(
             width: 27,
             height: 27,
             onPressedUp: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year, datum.month + 1, datum.day));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(DateTime(datum.year, datum.month + 1, datum.day));
             },
             onPressedDown: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year, datum.month - 1, datum.day));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(DateTime(datum.year, datum.month - 1, datum.day));
             },
             onLongPressedUp: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year, datum.month + 10, datum.day));
+              ref
+                  .read(bmiProviderLokalSpeicher.notifier)
+                  .changeDatum(DateTime(datum.year, datum.month + 10, datum.day));
             },
             onLongPressedDown: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year, datum.month - 10, datum.day));
+              ref
+                  .read(bmiProviderLokalSpeicher.notifier)
+                  .changeDatum(DateTime(datum.year, datum.month - 10, datum.day));
             },
           ),
           ArrowButtons.vertical(
             width: 27,
             height: 27,
             onPressedUp: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year + 1, datum.month, datum.day));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(DateTime(datum.year + 1, datum.month, datum.day));
             },
             onPressedDown: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year - 1, datum.month, datum.day));
+              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(DateTime(datum.year - 1, datum.month, datum.day));
             },
             onLongPressedUp: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year + 10, datum.month, datum.day));
+              ref
+                  .read(bmiProviderLokalSpeicher.notifier)
+                  .changeDatum(DateTime(datum.year + 10, datum.month, datum.day));
             },
             onLongPressedDown: () {
-              ref.read(bmiProviderLokalSpeicher.notifier).changeDatum(
-                  DateTime(datum.year - 10, datum.month, datum.day));
+              ref
+                  .read(bmiProviderLokalSpeicher.notifier)
+                  .changeDatum(DateTime(datum.year - 10, datum.month, datum.day));
             },
           ),
         ],

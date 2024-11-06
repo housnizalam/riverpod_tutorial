@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4_state_notifier_provider/logic.dart';
 
 class GewichtStaateNotifierUntericht extends ConsumerWidget {
@@ -8,12 +8,13 @@ class GewichtStaateNotifierUntericht extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+     print('Gewicht Widget wird gebaut');
     return Row(
       children: [
         Expanded(flex: 3,
           child: FittedBox(
             child: Text(
-              'Gewicht: ${ref.watch(bmiStateNotifierProvider).gewicht}',
+              'Gewicht: ${ref.watch(bmiStateNotifierProvider.select((value) => value.gewicht,))}',
               style: TextStyle(fontSize: 30),
             ),
           ),

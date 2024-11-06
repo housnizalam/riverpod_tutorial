@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v7_future_provider_local_speicher/logic/future_provider.dart';
 
 class AddGrosseLokalSpeicher extends ConsumerWidget {

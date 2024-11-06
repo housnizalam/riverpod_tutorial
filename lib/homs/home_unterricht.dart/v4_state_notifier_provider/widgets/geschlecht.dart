@@ -8,14 +8,17 @@ class GeschlechtWidgetStateNotifier extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    print('Gschlecht Widget wird gebaut');
     return Row(
       children: [
         Expanded(
           flex: 3,
           child: FittedBox(
             child: Text(
-              ref.watch(bmiStateNotifierProvider).geschlecht,
-              style: TextStyle(fontSize: 30),
+              ref.watch(bmiStateNotifierProvider.select(
+                (value) => value.geschlecht,
+              )),
+              style: const TextStyle(fontSize: 30),
             ),
           ),
         ),
@@ -27,27 +30,21 @@ class GeschlechtWidgetStateNotifier extends ConsumerWidget {
               children: [
                 TextButton(
                   onPressed: () {
-                    ref
-                        .read(bmiStateNotifierProvider.notifier)
-                        .upgradeGeschlecht('Mänlich');
+                    ref.read(bmiStateNotifierProvider.notifier).upgradeGeschlecht('Mänlich');
                   },
-                  child: Text('M'),
+                  child: const Text('M'),
                 ),
                 TextButton(
                   onPressed: () {
-                    ref
-                        .read(bmiStateNotifierProvider.notifier)
-                        .upgradeGeschlecht('Weiblich');
+                    ref.read(bmiStateNotifierProvider.notifier).upgradeGeschlecht('Weiblich');
                   },
-                  child: Text('F'),
+                  child: const Text('F'),
                 ),
                 TextButton(
                   onPressed: () {
-                    ref
-                        .read(bmiStateNotifierProvider.notifier)
-                        .upgradeGeschlecht('Anders');
+                    ref.read(bmiStateNotifierProvider.notifier).upgradeGeschlecht('Anders');
                   },
-                  child: Text('A'),
+                  child: const Text('A'),
                 )
               ],
             ),

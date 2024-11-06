@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v1_statefull_widget/widgets/alter_text.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v1_statefull_widget/widgets/button_widget.dart';
 

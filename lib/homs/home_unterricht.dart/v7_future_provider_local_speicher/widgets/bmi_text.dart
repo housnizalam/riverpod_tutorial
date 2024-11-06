@@ -17,8 +17,7 @@ class BmiFutureUnterichtLokalSpeicher extends ConsumerWidget {
           child: FittedBox(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text(
-                  'BMI: ${ref.watch(bmiProviderLokalSpeicher).bmi.toStringAsFixed(2)}'),
+              child: Text('BMI: ${ref.watch(bmiProviderLokalSpeicher).bmi.toStringAsFixed(2)}'),
             ),
           ),
         ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v4_state_notifier_provider/logic.dart';
 
 class AlterWidgetStateNotifier extends ConsumerWidget {
@@ -8,11 +8,13 @@ class AlterWidgetStateNotifier extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+     print('Alter Widget wird gebaut');
     final alter = ref.watch(alterStateNotifierProvider);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Expanded(flex: 3,
+        Expanded(
+          flex: 3,
           child: FittedBox(
             child: Text(
               'Alter: $alter',

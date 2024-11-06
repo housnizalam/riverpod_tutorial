@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpod_tutorial/generals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v2_provider/logic.dart';
 
 class ButtonWidgetProvider extends ConsumerWidget {
   const ButtonWidgetProvider({super.key});
@@ -10,7 +11,7 @@ class ButtonWidgetProvider extends ConsumerWidget {
       height: 40,
       width: 40,
       onPressedUp: () {
-        // ref.read(alterProvider)++;
+        // ref.read(alterProvider.no);
       },
       onPressedDown: () {
         // ref.read(alterProvider)--;
