@@ -66,6 +66,8 @@ class BmiStateNotifierFutureUnterricht
   BmiStateNotifierFutureUnterricht()
       : super(BmiFutureUnterricht(
             groesse: 180, gewicht: 80, datum: DateTime.now()));
+
+            
   void changeGroesse(int groesse) {
     state = state.copyWith(groesse: state.groesse + groesse);
   }

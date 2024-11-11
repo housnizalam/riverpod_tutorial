@@ -8,14 +8,17 @@ class GewichtStaateNotifierUntericht extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-     print('Gewicht Widget wird gebaut');
+    print('Gewicht Widget wird gebaut');
     return Row(
       children: [
-        Expanded(flex: 3,
+        Expanded(
+          flex: 3,
           child: FittedBox(
             child: Text(
-              'Gewicht: ${ref.watch(bmiStateNotifierProvider.select((value) => value.gewicht,))}',
-              style: TextStyle(fontSize: 30),
+              'Gewicht: ${ref.watch(bmiStateNotifierProvider.select(
+                (value) => value.gewicht,
+              ))}',
+              style: const TextStyle(fontSize: 30),
             ),
           ),
         ),
@@ -37,7 +40,6 @@ class GewichtStaateNotifierUntericht extends ConsumerWidget {
             },
           ),
         ),
-    
       ],
     );
   }
