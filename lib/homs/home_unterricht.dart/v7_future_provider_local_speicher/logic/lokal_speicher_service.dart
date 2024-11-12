@@ -24,20 +24,21 @@ class LokalSpeicherService {
     return file;
   }
 
-  void deleteAll() async {
+  Future<void> deleteAll() async {
     final file = await _localFile;
     await file.delete();
   }
 
-  Future<File> addBmi(BmiLokalSpeicher bmi) async {
+  Future<void> addBmi(BmiLokalSpeicher bmi) async {
     final List<BmiLokalSpeicher> bmiList = await getBmiList();
     bmiList.add(bmi);
     final String data = jsonEncode(bmiList.map((e) => e.toMap()).toList());
     final file = await _localFile;
-    return file.writeAsString(data);
+    await file.writeAsString(data);
   }
 
   Future<List<BmiLokalSpeicher>> getBmiList() async {
+    // await Future.delayed(const Duration(seconds: 2));
     try {
       final file = await _localFile;
       String bmiJson = await file.readAsString();

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/logic/future_provider.dart';
 
-class HistoryListFutureProvider extends ConsumerWidget {
-  const HistoryListFutureProvider({super.key});
+class HistoryListFutureWhen extends ConsumerWidget {
+  const HistoryListFutureWhen({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

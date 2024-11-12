@@ -3,17 +3,17 @@ import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/w
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/add_gewicht.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/add_groesse.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/bmi_text.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/histori_list_future_whendata.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/history_List.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/history_List_future_builder.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/history_List_future_provider.dart';
-import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/history_List_future_provider2.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/history_List_future_when.dart';
+import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/widgets/history_List_future_onloading.dart';
 
 class HomeUnterrichtFutureProvider extends StatelessWidget {
   const HomeUnterrichtFutureProvider({super.key});
 
   @override
   Widget build(BuildContext context) {
-  
     return const Scaffold(
       body: Row(
         children: [
@@ -34,7 +34,7 @@ class HomeUnterrichtFutureProvider extends StatelessWidget {
             color: Colors.black,
             thickness: 5,
           ),
-          Expanded(child: HistoryListFutureProvider2()),
+          Expanded(child: HistoryListFutureWhenData()),
         ],
       ),
     );

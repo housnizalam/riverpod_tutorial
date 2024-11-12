@@ -18,7 +18,7 @@ final bmiListFutureProvider = FutureProvider<List<BmiFutureUnterricht>>((ref) {
 });
 
 final bmiListFutureProvider2=FutureProvider((ref) async {
-  await Future.delayed(Duration(seconds: 2));
+  await Future.delayed(Duration(seconds: 5));
   return APIService.getBmiList();
 });
 

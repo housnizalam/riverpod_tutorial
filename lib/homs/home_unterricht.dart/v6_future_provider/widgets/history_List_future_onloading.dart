@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_tutorial/homs/home_unterricht.dart/v6_future_provider/logic/future_provider.dart';
 
-class HistoryListFutureProvider2 extends ConsumerWidget {
-  const HistoryListFutureProvider2({super.key});
+class HistoryListFutureOnLoading extends ConsumerWidget {
+  const HistoryListFutureOnLoading({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -17,9 +17,9 @@ class HistoryListFutureProvider2 extends ConsumerWidget {
     }
     return ListView(
       children: [
-        Center(
+        const Center(
             child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Text('Historie'),
         )),
         for (final bmi in bmiList.value!)
@@ -29,8 +29,7 @@ class HistoryListFutureProvider2 extends ConsumerWidget {
               child: Card(
                 child: ListTile(
                   title: FittedBox(
-                    child: Text(
-                        '${bmi.datum.day}/${bmi.datum.month}/${bmi.datum.year}'),
+                    child: Text('${bmi.datum.day}/${bmi.datum.month}/${bmi.datum.year}'),
                   ),
                   subtitle: Text(' BMI: ${bmi.bmi.toStringAsFixed(2)}'),
                 ),
