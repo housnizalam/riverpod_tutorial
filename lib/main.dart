@@ -10,6 +10,7 @@ import 'package:riverpod_tutorial/homes/home_state_provider/home_state_provider.
 import 'package:riverpod_tutorial/homes/home_stream/home_stream.dart';
 import 'package:riverpod_tutorial/homes/home_unterricht.dart/v10_family_as_filter/home_widget.dart';
 import 'package:riverpod_tutorial/homes/home_unterricht.dart/v11_stream_provider/home_stream_provider.dart';
+import 'package:riverpod_tutorial/homes/home_unterricht.dart/v12_stream_with_api/stream_widget.dart';
 import 'package:riverpod_tutorial/homes/home_unterricht.dart/v1_statefull_widget/unterricht_home.dart';
 import 'package:riverpod_tutorial/homes/home_unterricht.dart/v9_family/home_family.dart';
 import 'package:riverpod_tutorial/homes/home_unterricht.dart/v3_state_provider/home_state_provider.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeStremProviderUnterricht(),
+      home: StreamWithLokalSpeicher(),
       // HomeStateNotifierProvider()
       // HomeNotifierProvider()
       // HomeStateProvider()
