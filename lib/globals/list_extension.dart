@@ -1,4 +1,6 @@
 
+import 'package:flutter/material.dart';
+
 extension Vergleich<T> on List {
   bool isEqual(List<T> other) {
     if (length != other.length) return false;
@@ -14,3 +16,4 @@ extension Vergleich<T> on List {
 //     return other is List && other.isEqual(this);
 //   }
 }
+

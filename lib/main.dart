@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpod_tutorial/globals/navi_klass.dart';
 
-import 'package:riverpod_tutorial/homs.dart/v12_stream_with_api/home.dart';
-import 'package:riverpod_tutorial/homs.dart/v2_provider/home.dart';
-import 'package:riverpod_tutorial/homs.dart/v6_future_provider/home_widget.dart';
-import 'package:riverpod_tutorial/homs.dart/v8_auto_dispose/home_widget.dart';
 
 
 void main() {
@@ -22,8 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AutoDisposeHome(),
-
+      home: NaviClass.steram,
     );
   }
 }

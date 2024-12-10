@@ -5,8 +5,8 @@ import 'package:riverpod_tutorial/homs.dart/v3_state_provider/logic.dart';
 import 'package:riverpod_tutorial/homs.dart/v3_state_provider/widgets/alter_widget.dart';
 import 'package:riverpod_tutorial/homs.dart/v3_state_provider/widgets/button_widget.dart';
 
-class StateproviderHome extends ConsumerWidget {
-  const StateproviderHome({super.key});
+class StateProviderHome extends ConsumerWidget {
+  const StateProviderHome({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

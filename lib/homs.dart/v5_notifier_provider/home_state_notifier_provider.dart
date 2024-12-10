@@ -7,8 +7,8 @@ import 'package:riverpod_tutorial/homs.dart/v5_notifier_provider/widgets/geschle
 import 'package:riverpod_tutorial/homs.dart/v5_notifier_provider/widgets/gewicht.dart';
 import 'package:riverpod_tutorial/homs.dart/v5_notifier_provider/widgets/groesse.dart';
 
-class NotifierProviderHome extends ConsumerWidget {
-  const NotifierProviderHome({super.key});
+class NotifierHome extends ConsumerWidget {
+  const NotifierHome({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

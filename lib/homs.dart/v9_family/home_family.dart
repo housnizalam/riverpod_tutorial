@@ -3,14 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_tutorial/globals/arrows_buttons.dart';
 import 'package:riverpod_tutorial/homs.dart/v9_family/logic.dart';
 
-class FamilyProviderHome extends ConsumerStatefulWidget {
-  const FamilyProviderHome({super.key});
+class FamilyHome extends ConsumerStatefulWidget {
+  const FamilyHome({super.key});
 
   @override
-  ConsumerState<FamilyProviderHome> createState() => _FamilyProviderHomeState();
+  ConsumerState<FamilyHome> createState() => _FamilyProviderHomeState();
 }
 
-class _FamilyProviderHomeState extends ConsumerState<FamilyProviderHome> {
+class _FamilyProviderHomeState extends ConsumerState<FamilyHome> {
   int gewicht = 80;
   int groesse = 180;
   @override
