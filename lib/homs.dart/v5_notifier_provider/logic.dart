@@ -75,6 +75,8 @@ final bmiNotifier = NotifierProvider<BmiRechnerNotifier, BmiRechner>(() {
 });
 
 class BmiRechnerNotifier2 extends Notifier<BmiRechnerNotifier2> {
+  // Bei der Notifier Klasse kann die State Klasse innerhalb der Notifier Klasse erstellt werden.
+  // Sodass braucht man nicht die State Klasse separat zu erstellen.
   final double alter;
   final double gewicht;
   final double groesse;
@@ -102,10 +104,12 @@ class BmiRechnerNotifier2 extends Notifier<BmiRechnerNotifier2> {
       return Colors.red;
     }
   }
-
+  
+  // Astatt Konstruktor, muss man die build Methode überschreiben
   @override
   BmiRechnerNotifier2 build() => BmiRechnerNotifier2();
 
+  // alles anders ist ähnlich wie bei der StateNotifier Klasse
   void upgradeAlter(int value) {
     state = BmiRechnerNotifier2(
       alter: state.alter + value,
@@ -143,6 +147,8 @@ class BmiRechnerNotifier2 extends Notifier<BmiRechnerNotifier2> {
   }
 }
 
+// Der Bau von Provider
+// Anstatt der State-Klasse, wird die Notifier-Klasse verwendet
 final bmiChangeNotifier = NotifierProvider<BmiRechnerNotifier2, BmiRechnerNotifier2>(
   () => BmiRechnerNotifier2(),
 );

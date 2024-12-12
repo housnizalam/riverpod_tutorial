@@ -14,7 +14,9 @@ class AlterStateNotifier extends StateNotifier<int> {
 
 final alterStateNotifierProvider = StateNotifierProvider<AlterStateNotifier, int>((ref) => AlterStateNotifier());
 
+// Klass BmiRechner erstellen
 class BmiRechner {
+  // die klasse soll immutable sein
   final double gewicht;
   final double groesse;
   final String geschlecht;
@@ -23,7 +25,7 @@ class BmiRechner {
     required this.groesse,
     required this.geschlecht,
   });
-
+  // nur copyWith Methode soll hier erstellt werden
   BmiRechner copyWith({
     double? gewicht,
     double? groesse,
@@ -52,11 +54,13 @@ class BmiRechner {
     }
   }
 }
-
+// StateNotifier Klasse erstellen
 class BMIStateNotifier extends StateNotifier<BmiRechner> {
+  // Konstruktor durch super erstellen
   BMIStateNotifier() : super(const BmiRechner(gewicht: 80, groesse: 180, geschlecht: 'Mänlich'));
-
+  // die verlangte Funktionen erstellen
   void upgradeGewicht(double value) {
+    // die neue State soll immer in der state gespeichert werden
     state = state.copyWith(gewicht: state.gewicht + value);
   }
 
@@ -68,7 +72,7 @@ class BMIStateNotifier extends StateNotifier<BmiRechner> {
     state = state.copyWith(geschlecht: geschlecht);
   }
 }
-
+// Der Bau von Provider
 final bmiStateNotifierProvider = StateNotifierProvider<BMIStateNotifier, BmiRechner>((ref) {
   return BMIStateNotifier();
 });
