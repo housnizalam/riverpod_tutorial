@@ -26,7 +26,7 @@ final colorProvider = Provider<Color>((ref) {
     }
   } else {
     if (bmi < 17.5) {
-      return Colors.pink;
+      return Colors.blue;
     } else if (bmi < 24) {
       return Colors.green;
     } else if (bmi < 29) {
@@ -37,14 +37,4 @@ final colorProvider = Provider<Color>((ref) {
   }
 });
 
-// final detailsProvider = Provider<String>(
-//   (ref) {
-//     final alter = ref.watch(alterStateProvider);
-//     final gewicht = ref.watch(gewichtProvider);
-//     final groesse = ref.watch(groesseProvider);
-//     final bmi = ref.watch(bmiProvider);
-//     String result = '\nAlter: $alter\nGewicht: $gewicht\nGröße: $groesse \n BMI: $bmi';
-//     return result;
-//   },
-// );
 
